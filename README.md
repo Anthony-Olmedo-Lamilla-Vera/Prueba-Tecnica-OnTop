@@ -1,2 +1,2 @@
 # Prueba-Tecnica-OnTop
-## Start App -> npm run dev
+## Start App -> npm install && npm run dev
