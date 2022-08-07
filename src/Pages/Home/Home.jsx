@@ -2,6 +2,7 @@ import { Carousel } from "flowbite-react";
 import React, { useEffect, useState } from "react";
 import Items from "../../components/Items";
 import Loyaut from "../../components/Loyaut";
+import Wrapper from "../../components/Wrapper";
 import useFetchData from "../../Hooks/useFetchData";
 function Home() {
   const { data, isLoading, error } = useFetchData("/comics");
@@ -14,7 +15,7 @@ function Home() {
   }, [data]);
 
   return (
-    <Loyaut title={"Home"} Loading={isLoading}>
+    <Wrapper title={"Home"} Loading={isLoading}>
       <div className="lg:min-h-screen px-3 my-5">
         <div className=" h-96 col-start-1 ">
           <Carousel indicators={false} slide={true}>
@@ -35,7 +36,7 @@ function Home() {
         </div>
         <Items data={data} />
       </div>
-    </Loyaut>
+    </Wrapper>
   );
 }
 

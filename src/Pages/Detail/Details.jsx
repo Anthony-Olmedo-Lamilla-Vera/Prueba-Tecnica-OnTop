@@ -5,6 +5,7 @@ import { Spinner } from "flowbite-react";
 import useFetchData from "../../Hooks/useFetchData";
 import Items from "../../components/Items";
 import Loyaut from "../../components/Loyaut";
+import Wrapper from "../../components/Wrapper";
 
 function Detail() {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -12,10 +13,10 @@ function Detail() {
   const id = searchParams.get("type");
   const { data, isLoading, error } = useFetchData(`${id}`);
   return (
-    <Loyaut title={id} Loading={isLoading}>
+    <Wrapper title={id} Loading={isLoading}>
       <h1>Detalle</h1>
       <Items data={data} />
-    </Loyaut>
+    </Wrapper>
   );
 }
 

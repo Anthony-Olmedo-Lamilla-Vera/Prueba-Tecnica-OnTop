@@ -3,14 +3,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 function Loyaut({ children, title = "Inicio", Loading = false, err = false }) {
-  if (Loading) {
-    return (
-      <div className="  my-5 flex justify-center">
-        <Spinner aria-label="Default status example" />
-      </div>
-    );
-  }
-
   return (
     <div className="bg-slate-700">
       <Helmet>
