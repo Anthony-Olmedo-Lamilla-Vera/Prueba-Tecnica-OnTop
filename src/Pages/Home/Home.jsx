@@ -18,7 +18,7 @@ function Home() {
     <Wrapper title={"Home"} Loading={isLoading}>
       <div className="lg:min-h-screen px-3 my-5">
         <div className=" h-96 col-start-1 ">
-          <Carousel indicators={false} slide={true}>
+          <Carousel indicators={true} slide={true}>
             {Imgs &&
               Imgs.map((item) => {
                 return (
