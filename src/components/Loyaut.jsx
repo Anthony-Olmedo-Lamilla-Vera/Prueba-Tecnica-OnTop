@@ -2,7 +2,12 @@ import { Spinner } from "flowbite-react";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-function Loyaut({ children, title = "Inicio", Loading = false, err = false }) {
+function Loyaut({
+  children,
+  title = "Cargando ...",
+  Loading = false,
+  err = false,
+}) {
   return (
     <div className="bg-slate-700">
       <Helmet>

@@ -1,20 +1,18 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
-import { Spinner } from "flowbite-react";
 
 import useFetchData from "../../Hooks/useFetchData";
 import Items from "../../components/Items";
-import Loyaut from "../../components/Loyaut";
 import Wrapper from "../../components/Wrapper";
 
 function Detail() {
   let [searchParams, setSearchParams] = useSearchParams();
 
-  const id = searchParams.get("type");
-  const { data, isLoading, error } = useFetchData(`${id}`);
+  const Type = searchParams.get("type");
+  const { data, isLoading } = useFetchData(`${Type}`);
   return (
-    <Wrapper title={id} Loading={isLoading}>
-      <h1>Detalle</h1>
+    <Wrapper title={Type || ""} Loading={isLoading}>
+      <h1 className="text-white text-center  text-3xl my-4">Search : {Type}</h1>
       <Items data={data} />
     </Wrapper>
   );

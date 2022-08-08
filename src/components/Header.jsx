@@ -8,7 +8,6 @@ function Linked({ param, title }) {
   const NavigatePage = (path) => {
     Navegar(path);
   };
-
   return (
     <Dropdown.Item onClick={() => NavigatePage("/detail?type=" + param)}>
       {title}
@@ -29,8 +28,8 @@ function Header() {
 
       <Dropdown arrowIcon={true} inline={true} label="Filtrar por">
         <Linked param={"characters"} title="Characters" />
-
         <Linked param={"series"} title="Series" />
+        <Linked param={"comics"} title="Comics" />
       </Dropdown>
     </Navbar>
   );
